@@ -172,4 +172,18 @@ export class RaycasterHelper extends Object3D {
       this.hits.length > 0 ? this.colors.origin[0] : this.colors.origin[1]
     );
   };
+
+  dispose = () => {
+    this.origin.geometry.dispose()
+    this.origin.material.dispose()
+    this.near.geometry.dispose()
+    this.near.material.dispose()
+    this.far.geometry.dispose()
+    this.far.material.dispose()
+    this.nearToFar.geometry.dispose()
+    this.nearToFar.material.dispose()
+    this.originToNear.geometry.dispose()
+    this.originToNear.material.dispose()
+    this.hitPoints.dispose()
+  };
 }
