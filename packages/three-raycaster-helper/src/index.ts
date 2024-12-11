@@ -3,6 +3,7 @@ import {
   BufferGeometry,
   Float32BufferAttribute,
   InstancedMesh,
+  Intersection,
   Line,
   LineBasicMaterial,
   Mesh,
@@ -17,7 +18,7 @@ const _o = new Object3D();
 const _v = new Vector3();
 export class RaycasterHelper extends Object3D {
   raycaster: Raycaster;
-  hits: [];
+  hits: Intersection[];
 
   origin: Mesh<SphereGeometry, MeshBasicMaterial>;
   near: Line<BufferGeometry, LineBasicMaterial>;
